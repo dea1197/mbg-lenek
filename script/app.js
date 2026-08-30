@@ -382,6 +382,7 @@ const editAlergen = document.getElementById("editAlergen");
 
 let selectedId = null;
 
+
 window.editProduk = async function (id) {
 
   if (!isAdminLogin) {
@@ -391,6 +392,7 @@ window.editProduk = async function (id) {
 
   selectedId = id;
 
+
   const snapshot = await get(ref(db, COLLECTION + "/" + id));
 
   if (!snapshot.exists()) {
@@ -398,8 +400,11 @@ window.editProduk = async function (id) {
     return;
   }
 
+  oldImageUrl = image;
+
   const data = snapshot.val();
 
+  editMenuImage.value = data.file || "";
   editName.value = data.name || "";
   editPrice.value = data.price || "";
 
@@ -427,61 +432,84 @@ window.closeModal = function () {
   modal.style.display = "none";
 };
 
+const editMenuImage = document.getElementById("editMenuImage");
+let oldImageUrl = "";
+
 document.getElementById("btnUpdate")
   .addEventListener("click", async () => {
 
-    const name = editName.value;
-    const price = editPrice.value;
 
-    const porsi = editPorsi.value;
-    const desc = editDesc.value;
-    const kalori = editKalori.value;
+    const file = editMenuImage.files[0];
 
-    const energi = editEnergi.value;
-    const protein = editProtein.value;
-    const serat = editSerat.value;
-    const karbohidrat = editKarbo.value;
-    const lemak = editLemak.value;
-    const natrium = editNatrium.value;
+    let imageUrl = oldImageUrl;
 
-    const bahanUtama =
-      editBahanUtama.value.split(",");
-
-    const alergen = editAlergen.value;
-
-    await update(
-      ref(db, COLLECTION + "/" + selectedId),
-      {
-        name,
-        price,
-
-        detail: {
-          porsi,
-          desc,
-          kalori,
-
-          gizi: {
-            energi,
-            protein,
-            serat,
-            karbohidrat,
-            lemak,
-            natrium
-          },
-
-          bahanUtama,
-          alergen
-        }
+    try {
+      // kalau user pilih gambar baru
+      if (file) {
+        imageUrl = await uploadImage(file);
       }
-    );
 
-    alert("Produk berhasil diupdate!");
 
-    closeModal();
+      const name = editName.value;
+      const price = editPrice.value;
+
+      const porsi = editPorsi.value;
+      const desc = editDesc.value;
+      const kalori = editKalori.value;
+
+      const energi = editEnergi.value;
+      const protein = editProtein.value;
+      const serat = editSerat.value;
+      const karbohidrat = editKarbo.value;
+      const lemak = editLemak.value;
+      const natrium = editNatrium.value;
+
+      const bahanUtama =
+        editBahanUtama.value.split(",");
+
+      const alergen = editAlergen.value;
+
+      await update(
+        ref(db, COLLECTION + "/" + selectedId),
+        {
+          image: imageUrl,
+          name,
+          price,
+
+          detail: {
+            porsi,
+            desc,
+            kalori,
+
+            gizi: {
+              energi,
+              protein,
+              serat,
+              karbohidrat,
+              lemak,
+              natrium
+            },
+
+            bahanUtama,
+            alergen
+          }
+        }
+      );
+
+      alert("Produk berhasil diupdate!");
+
+      closeModal();
+    } catch (error) {
+      alert("Gagal update!");
+    }
   });
 
 //----------------Edit porsi Besar--------------
 const modal2 = document.getElementById("modalEdit2");
+
+const editMenuImage2 = document.getElementById("editMenuImage2");
+let oldImageUrl2 = "";
+
 const editName2 = document.getElementById("editName2");
 const editPrice2 = document.getElementById("editPrice2");
 const editDesc2 = document.getElementById("editDesc2");
@@ -518,6 +546,10 @@ window.editProduk2 = async function (id) {
   }
 
   const data = snapshot.val();
+  
+  oldImageUrl2 = image;
+
+  editMenuImage.value = data.file || "";
 
   editName2.value = data.name || "";
   editPrice2.value = data.price || "";
@@ -550,54 +582,68 @@ window.closeModal2 = function () {
 document.getElementById("btnUpdate-2")
   .addEventListener("click", async () => {
 
-    const name = editName2.value;
-    const price = editPrice2.value;
+    const file = editMenuImage2.files[0];
 
-    const porsi = editPorsi2.value;
-    const desc = editDesc2.value;
-    const kalori = editKalori2.value;
+    let imageUrl2 = oldImageUrl2;
 
-    const energi = editEnergi2.value;
-    const protein = editProtein2.value;
-    const serat = editSerat2.value;
-    const karbohidrat = editKarbo2.value;
-    const lemak = editLemak2.value;
-    const natrium = editNatrium2.value;
-
-    const bahanUtama =
-      editBahanUtama2.value.split(",");
-
-    const alergen = editAlergen2.value;
-
-    await update(
-      ref(db, PorsiBesar + "/" + selectedId2),
-      {
-        name,
-        price,
-
-        detail: {
-          porsi,
-          desc,
-          kalori,
-
-          gizi: {
-            energi,
-            protein,
-            serat,
-            karbohidrat,
-            lemak,
-            natrium
-          },
-
-          bahanUtama,
-          alergen
-        }
+    try {
+      // kalau user pilih gambar baru
+      if (file) {
+        imageUrl2 = await uploadImage(file);
       }
-    );
 
-    alert("Produk berhasil diupdate!");
+      const name = editName2.value;
+      const price = editPrice2.value;
 
-    closeModal2();
+      const porsi = editPorsi2.value;
+      const desc = editDesc2.value;
+      const kalori = editKalori2.value;
+
+      const energi = editEnergi2.value;
+      const protein = editProtein2.value;
+      const serat = editSerat2.value;
+      const karbohidrat = editKarbo2.value;
+      const lemak = editLemak2.value;
+      const natrium = editNatrium2.value;
+
+      const bahanUtama =
+        editBahanUtama2.value.split(",");
+
+      const alergen = editAlergen2.value;
+
+      await update(
+        ref(db, PorsiBesar + "/" + selectedId2),
+        {
+          image: imageUrl2,
+          name,
+          price,
+
+          detail: {
+            porsi,
+            desc,
+            kalori,
+
+            gizi: {
+              energi,
+              protein,
+              serat,
+              karbohidrat,
+              lemak,
+              natrium
+            },
+
+            bahanUtama,
+            alergen
+          }
+        }
+      );
+
+      alert("Produk berhasil diupdate!");
+
+      closeModal2();
+    } catch (error) {
+      alert("Gagal update!");
+    }
   });
 
 //-------------------------------------
