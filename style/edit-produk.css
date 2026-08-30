@@ -1,0 +1,56 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 20px;
+  margin: 10% auto;
+  width: 300px;
+  border-radius: 10px;
+  height: 540px;
+}
+
+.modal-content h3{
+  text-align: center;
+}
+
+.modal-content input{
+  height: 30px;
+  font-size: 15px;
+  border: 1px solid gray;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+.modal-content textarea{
+  min-height: 70px;
+  font-size: 15px;
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+#editName, #editPrice,
+#btnUpdate, #btnUpdateStrOrg,
+#editGaleriImage,#btnUpdateGaleri{
+  margin-bottom: 10px;
+}
+
+#editName2, #editPrice2,
+#btnUpdate-2, #btnUpdateStrOrg,
+#editGaleriImage,#btnUpdateGaleri{
+  margin-bottom: 10px;
+}
+
+.modal-content button{
+  padding: 5px 0;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}

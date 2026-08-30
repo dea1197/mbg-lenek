@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Galeri</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/admin.css">
+  <link rel="stylesheet" href="../style/edit-produk.css">
+  <link rel="stylesheet" href="./style/dataGaleri.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="home" id="home">
+      <a href="../admin.html">🏠</a>
+      <p><a href="../admin.html">Dapur MBG Lenek</a></p>
+    </div>
+
+    <ul class="nav-link" id="navLink">
+      <li><a href="../index.html">Home User</a></li>
+      <li><a href="../navbar/infomasi.html">Informasi</a></li>
+
+      <li><a href="../navbar/galeri.html">Galeri</a></li>
+      <li><a href="../navbar/about.html">Tentang Kami</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+  </nav>
+
+  <!----SideBar --------------------------->
+  <div class="sidebar-con">
+
+    <div class="sidebar">
+      <ul class="sidebar-link">
+        <li><a href="#">Data Galeri</a></li>
+        <li><a href="./dataInformasi.html">Data Informasi</a></li>
+        <li><a href="./dataGambar.html">Data Gambar</a></li>
+        <li><a href="./dataAbout.html">Data Tentang Kami</a></li>
+      </ul>
+    </div>
+
+    <button id="btn-sidebar">❯</button>
+  </div>
+
+  <!-----------tambah Galeri ------------>
+  <div class="tmbGaleri-n-con">
+    <button class="tmbGaleri-n-min">Tambah Galeri➕</button>
+  </div>
+  <hr>
+  
+
+  <div class="galeri-cont-form" style="display: none;">
+
+    <h3>Tambah Galeri</h3>
+
+    <input type="file" id="galeriImage">
+    <br>
+    <textarea id="galeriDesc" placeholder="Deskripsi"></textarea>
+
+    <br>
+
+    <button id="btnGaleri">Upload Galeri</button>
+  </div>
+
+  <!----------List Galeri ------------->
+  <h3 class="h3-list-galeri">List Galeri</h3>
+
+  <div id="listGaleriAdmin" class="list-galeri-grid">
+
+  </div>
+
+  
+
+  <!-----------Form edit galeri------------>
+  <div id="modalGaleri" class="modal">
+    <div class="modal-content">
+      <h3>Edit Galeri</h3>
+
+      <input type="file" id="editGaleriImage">
+      <textarea id="editGaleriDesc"></textarea>
+
+      <button id="btnUpdateGaleri">Update</button>
+      <button onclick="closeGaleriModal()">Batal</button>
+    </div>
+  </div>
+
+
+  <script src="../script/script.js"></script>
+  <script type="module" src="./script/dataGeleri.js"></script>
+  
+</body>
+
+</html>

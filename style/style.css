@@ -1,0 +1,598 @@
+body {
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding-top: 60px;
+}
+
+
+
+.navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50px;
+  background-color: hsl(219, 61%, 49%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  z-index: 101;
+}
+
+.hamburger {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 15px;
+  display: none;
+}
+
+.home {
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home p{
+  color: white;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.home a{
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.nav-link li {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-link {
+    position: absolute;
+    background: hsla(0, 0%, 20%, 0.808);
+    top: 60px;
+    right: 0;
+    width: 200px;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    padding: 10px 0;
+    border-radius: 10px;
+    z-index: 50;
+  }
+}
+
+.nav-link li {
+  padding: 5px 0;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+
+}
+
+a:hover {
+  color: hsl(49, 82%, 63%);
+}
+
+.nav-link.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Konten Grid --------------------------------*/
+.slider img {
+  display: none;
+}
+
+.slides img {
+  width: 100%;
+
+}
+
+img.displaySlide {
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.slider {
+  position: relative;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding: 10px 15px;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.prevBtn {
+  left: 0;
+}
+
+.nextBtn {
+  right: 0;
+}
+
+.img-child-1 img {
+  width: 100%;
+}
+
+.img-child-2 img {
+  width: 100%;
+}
+
+.grid-container {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 492px) {
+  .img-child-2 img {
+    display: none;
+  }
+
+  .img-child-1 img {
+    display: none;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (min-width:493px) and (max-width:745px) {
+  .img-child-2 img {
+    display: none;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.con-div img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.con-div p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* max 3 baris */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 10px;
+}
+
+.div-p p {
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+
+}
+
+.div-p {
+  background-color: hsl(120, 61%, 38%);
+  border-radius: 5px;
+  margin-top: auto;
+}
+
+.h3-menu-mbg-dash {
+  text-align: center;
+  color: hsla(0, 0%, 0%, 0.747);
+}
+
+/*------- Footer --------------*/
+
+.footer{
+  width: 100%;
+  background: var(--green-dark);
+  color: #fff;
+  padding: 50px 20px 20px;
+  z-index: 5;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.footer-box h2,
+.footer-box h3 {
+  margin-bottom: 15px;
+}
+
+.footer-box p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-box a {
+  display: block;
+  color: #ccc;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-box a:hover {
+  color: #fff;
+}
+
+/* Kontak item */
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-item i {
+  font-size: 18px;
+}
+
+/* Social */
+.social a {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: #fff;
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+/*------- Info Porsi CSS --------------*/
+
+.section-porsi {
+  background: #fff;
+  padding: 30px 16px 40px;
+}
+
+.section-porsi h2 {
+  text-align: center;
+  color: hsla(0, 0%, 0%, 0.747);
+  font-size: 1.25rem;
+  margin: 0 0 4px 0;
+}
+
+.section-porsi>hr {
+  margin-bottom: 24px;
+}
+
+/* === WRAPPER 2 KOLOM PORSI === */
+.porsi-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  max-width: 900px;
+  margin: 0 auto 28px auto;
+}
+
+@media (max-width: 540px) {
+  .porsi-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === KARTU PORSI === */
+.porsi-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.porsi-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Header kartu */
+.porsi-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  color: #fff;
+}
+
+.porsi-card-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.porsi-card-header .icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.porsi-card-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.porsi-card-header .harga-badge {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Warna per kategori */
+.porsi-kecil .porsi-card-header {
+  background: hsl(219, 82%, 63%);
+}
+
+.porsi-besar .porsi-card-header {
+  background: hsl(30, 90%, 52%);
+}
+
+/* === DAFTAR MENU (scroll horizontal di HP) === */
+.menu-scroll-area {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 14px 14px 10px;
+  background: #fafafa;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.menu-scroll-area::-webkit-scrollbar {
+  height: 4px;
+}
+
+.menu-scroll-area::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Tiap item menu */
+.menu-item {
+  flex: 0 0 130px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 95px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder gambar sementara (pakai warna + emoji) */
+.menu-item .img-placeholder {
+  width: 100%;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  background: #f0f0f0;
+}
+
+.menu-item-label {
+  padding: 6px 8px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.porsi-kecil .menu-item-label {
+  background: hsl(219, 82%, 63%);
+}
+
+.porsi-besar .menu-item-label {
+  background: hsl(30, 90%, 52%);
+}
+
+/* === PENERIMA === */
+.porsi-penerima {
+  padding: 12px 16px 16px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.porsi-penerima p {
+  margin: 0 0 7px 0;
+  font-size: 0.82rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.penerima-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.porsi-kecil .chip {
+  background: hsl(219, 82%, 92%);
+  color: hsl(219, 82%, 40%);
+  border: 1px solid hsl(219, 82%, 75%);
+}
+
+.porsi-besar .chip {
+  background: hsl(30, 90%, 92%);
+  color: hsl(30, 90%, 38%);
+  border: 1px solid hsl(30, 90%, 72%);
+}
+
+/* === BANNER JADWAL === */
+.jadwal-banner {
+  max-width: 900px;
+  margin: 0 auto;
+  background: hsl(120, 61%, 38%);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.jadwal-banner .jadwal-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.jadwal-banner h3 {
+  margin: 0 0 4px 0;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.jadwal-banner p {
+  margin: 0 0 8px 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.82rem;
+}
+
+.hari-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.hari-chip {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 3px 9px;
+  font-size: 0.74rem;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+/* Hari ini — highlight kuning + animasi pulse */
+.hari-chip.hari-ini {
+  background: #FFD600;
+  color: #1a1a1a;
+  border-color: #FFD600;
+  box-shadow: 0 0 0 3px rgba(255, 214, 0, 0.4);
+  animation: pulse-hari 1.8s ease-in-out infinite;
+  position: relative;
+}
+
+/* Tanda titik kecil di atas chip */
+.hari-chip.hari-ini::before {
+  content: "●";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.5rem;
+  color: #FFD600;
+}
+
+@keyframes pulse-hari {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px rgba(255, 214, 0, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(255, 214, 0, 0.15);
+  }
+}
+
+@media (max-width: 480px) {
+  .jadwal-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hari-chips {
+    justify-content: center;
+  }
+}

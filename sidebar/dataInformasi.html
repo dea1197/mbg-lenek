@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Informasi</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/admin.css">
+  <link rel="stylesheet" href="../style/edit-produk.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="home" id="home">
+      <a href="../admin.html">🏠</a>
+      <p><a href="../admin.html">Dapur MBG Lenek</a></p>
+    </div>
+
+    <ul class="nav-link" id="navLink">
+      <li><a href="../index.html">Home User</a></li>
+      <li><a href="../navbar/infomasi.html">Informasi</a></li>
+
+      <li><a href="../navbar/galeri.html">Galeri</a></li>
+      <li><a href="../navbar/about.html">Tentang Kami</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+  </nav>
+
+  <!----SideBar --------------------------->
+  <div class="sidebar-con">
+
+    <div class="sidebar">
+      <ul class="sidebar-link">
+        <li><a href="./dataGaleri.html">Data Galeri</a></li>
+        <li><a href="#">Data Informasi</a></li>
+        <li><a href="./dataGambar.html">Data Gambar</a></li>
+        <li><a href="./dataAbout.html">Data Tentang Kami</a></li>
+      </ul>
+    </div>
+
+    <button id="btn-sidebar">❯</button>
+  </div>
+
+  <!-- lIst Struktur Organisasi-->
+  <h3 class="h3-data-strOrg">Data Struktur Organisasi</h3>
+
+  <div id="listStrOrgiAdmin">
+
+  </div>
+
+  <!-- ---------------------->
+   <div class="tmb-data-con">
+    <button id="edit-strOrgBtn">Edit Struktur Organisasi➕</button>
+  </div>
+
+  <div class="tambInformasi-con">
+
+    <h2>Upload Struktur Organisasi</h2>
+
+    <br>
+
+    <input type="file" id="image-st-org">
+
+    <br><br>
+
+    <textarea id="desc-st-org" placeholder="Deskripsi Menu"></textarea>
+
+    <br>
+
+    <button id="btnUpload-st-org">Upload</button>
+  </div>
+
+  <!--  Edit -->
+
+  <div id="modalStrOrg" class="modal">
+    <div class="modal-content">
+      <h3>Edit Data</h3>
+
+      <input type="file" id="editStrOrgImage">
+      <textarea id="editStrOrgDesc"></textarea>
+
+      <button id="btnUpdateStrOrg">Update</button>
+      <button onclick="closeStrOrgModal()">Batal</button>
+    </div>
+  </div>
+  
+  <script src="../script/script.js"></script>
+  <script type="module" src="./script/dataInformasi.js"></script>
+</body>
+</html>

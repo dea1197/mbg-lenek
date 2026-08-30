@@ -1,0 +1,43 @@
+
+
+.aboutUs-con img{
+  width: 140px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.301);
+}
+
+.aboutUs-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border: 2px solid hsl(0, 0%, 75%);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.aboutUs-con p{
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-indent: 30px;
+  text-align: justify;
+}
+
+.h3-aboutUs{
+  text-align: center;
+}
+
+.aboutUs-con button{
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#editAboutImage,#btnUpdateAbout{
+  margin-bottom: 10px;
+}

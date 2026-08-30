@@ -1,0 +1,102 @@
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.list-slider-con img{
+  width: 100%;
+  border-radius: 5px;
+  
+}
+.list-slider-con,.list-gmbKiri-con,.list-gmbKanan-con{
+  border: 2px solid hsla(0, 0%, 82%, 0.733);
+  padding: 10px;
+  border-radius: 5px;
+}
+.list-gmbKiri-con,.list-gmbKanan-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.list-gmbKiri-con button{
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.list-gmbKanan-con button{
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.list-slider-con button{
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#list-slider{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 10px;
+}
+
+.h3-data-gambar{
+  text-align: center;
+  color: hsla(0, 1%, 17%, 0.801);
+}
+
+.div-tmb-slider,.div-tmb-gmbKiri{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div-tmb-slider button{
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.div-tmb-gmbKiri button{
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.list-gmbKiri-con img{
+  max-width: 300px;
+  border-radius: 5px;
+}
+.list-gmbKanan-con img{
+  max-width: 300px;
+  border-radius: 5px;
+}
+.h3-gambar-kiri,.h3-gambar-kanan{
+  text-align: center;
+}

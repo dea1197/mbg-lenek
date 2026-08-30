@@ -1,0 +1,477 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding-top: 60px;
+}
+
+.login-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(223, 223, 223, 0.863);
+  padding: 10px 0;
+}
+
+.login-con button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-con input {
+  height: 25px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 16px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.logOut-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(223, 223, 223, 0.863);
+  padding: 10px 0;
+}
+
+.logOut-con button {
+  background-color: hsl(0, 84%, 45%);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.listAdmin-grid {
+  display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+
+.h2-dasbord-menu {
+  text-align: center;
+}
+
+
+.menu-item:hover{
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.menu-item p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* max 3 baris */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+.listAdmin-grid button {
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  padding: 5px 10px;
+}
+
+.btn-editDel-con button{
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.editBtn {
+  background-color: hsl(240, 100%, 50%);
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.deleteBtn {
+  background-color: hsl(0, 84%, 45%);
+  margin-top: 5px;
+}
+
+.editBtn:hover {
+  background-color: hsl(240, 100%, 30%);
+}
+
+.deleteBtn:hover {
+  background-color: hsl(0, 84%, 55%);
+}
+
+.listAdmin-grid p {
+  text-align: center;
+}
+
+.listAdmin-grid h3 {
+  text-align: center;
+}
+
+.btn-editDel-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.tambProduk-con, .tambProduk-con-2{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(0, 0%, 83%, 0.801);
+  margin-top: 20px;
+
+}
+
+.tambProduk-con input {
+  height: 25px;
+  font-size: 15px;
+  padding: 0 10px;
+}
+.tambProduk-con-2 input {
+  height: 25px;
+  font-size: 15px;
+  padding: 0 10px;
+}
+
+.tambProduk-con textarea {
+  font-size: 15px;
+  padding: 0 5px;
+  width: 300px;
+  min-height: 70px;
+}
+.tambProduk-con-2 textarea {
+  font-size: 15px;
+  padding: 0 5px;
+  width: 300px;
+  min-height: 70px;
+}
+
+.tambProduk-con button {
+  background-color: hsl(120, 41%, 43%);
+  color: white;
+  font-size: 15px;
+  border: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+.tambProduk-con-2 button {
+  background-color: hsl(120, 41%, 43%);
+  color: white;
+  font-size: 15px;
+  border: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.div-tmb-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tmb-menu,.tmb-menu-2 {
+  background-color: hsl(120, 100%, 25%);
+  color: white;
+  border: none;
+  padding: 6px 9px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.h3-data-strOrg {
+  text-align: center;
+
+}
+
+.list-strOrg-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-strOrg-con button {
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tambInformasi-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(211, 211, 211, 0.596);
+  padding-bottom: 20px;
+  padding-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.tambInformasi-con textarea {
+  height: 50px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.tambInformasi-con button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tmb-data-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10PX;
+}
+
+.tmb-data-con button {
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 9px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#editStrOrgImage {
+  margin-bottom: 10px;
+}
+
+.galeri-cont-form,.galeri-cont-form-2,.galeri-cont-form-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(0, 0%, 83%, 0.678);
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  margin-top: 10px;
+}
+
+.galeri-cont-form textarea {
+  min-height: 60px;
+  min-width: 200px;
+  font-size: 15px;
+  padding: 0 5px;
+}
+
+.galeri-cont-form button {
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 9px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.galeri-cont-form-3 button{
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 9px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.galeri-cont-form-2 button{
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 9px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.h3-list-galeri {
+  text-align: center;
+}
+
+.list-galeri-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  
+
+}
+/*----Batasi Text yang terlalu Panjang---*/
+.list-galeri-con p{
+   display: -webkit-box;
+  -webkit-line-clamp: 3; /* max 3 baris */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.list-galeri-con button {
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.list-galeri-con img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.list-galeri-con:hover{
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+
+.list-galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.scroll-bawah{
+  background-color: hsla(240, 100%, 50%, 0.664);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 5px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 1;
+}
+.scroll-bawah:hover{
+  background-color: hsla(240, 100%, 60%, 0.829);
+}
+
+.div-input-tmbData input{
+  width: 150px;
+  margin-right: 5px;
+}
+.div-input-login input{
+  width: 150px;
+  margin-right: 5px;
+}
+.login-con h2{
+  margin-top: 0;
+}
+
+/*---- SIDEBAR ----------------*/
+
+.sidebar{
+  background-color: hsla(0, 0%, 50%, 0.911);
+  position: fixed;
+  top: 60px;
+  height: 100%;
+  left: -210px;
+  width: 210px;
+  padding-top: 30px;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.sidebar.active{
+  left: 0;
+}
+.sidebar-link li{
+  font-size: 17px;
+  font-weight: bold;
+  margin: 20px 10px;
+  border: 1px solid white;
+  background-color: rgba(34, 34, 34, 0.678);
+  padding: 10px;
+  border-radius: 5px;
+
+  
+}
+
+
+.sidebar-con{
+  position: relative;
+}
+#btn-sidebar{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background-color: hsla(0, 0%, 0%, 0.719);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+#btn-sidebar.active{
+  left: 210px;
+}

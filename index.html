@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dapur MBG Lenek</title>
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./navbar/nav-style/about.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="home" id="home">
+      <a href="#">🏠</a>
+      <p><a href="#">Dapur MBG Lenek</a></p>
+    </div>
+    <ul class="nav-link" id="navLink">
+      <li><a href="#">Home</a></li>
+      <li><a href="navbar/infomasi.html">Informasi</a></li>
+      <li><a href="./navbar/galeri.html">Galeri</a></li>
+      <li><a href="./navbar/about.html">Tentang Kami</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+  </nav>
+
+  <!-- Konten Grid -->
+
+  <div class="grid-container">
+
+    <div class="img-child-1" id="gambar-kiri">
+      
+    </div>
+
+    <div class="slider" >
+
+      <div class="slides" id="listSlider">
+        
+      </div>
+
+      <button class="prevBtn" onclick=" prevSlide()">&#10094</button>
+      <button class="nextBtn" onclick="nextSlide()">&#10095</button>
+    </div>
+
+    <div class="img-child-2" id="gambar-kanan">
+      
+    </div>
+
+  </div>
+
+  <!--  Informasi Porsi ---------------------->
+
+  <section class="section-porsi">
+    <h2>Informasi Porsi &amp; Jadwal</h2>
+    <hr>
+
+    <div class="porsi-wrapper">
+
+      <!-- ===== KARTU PORSI KECIL ===== -->
+      <div class="porsi-card porsi-kecil">
+
+        <!-- Header -->
+        <div class="porsi-card-header">
+          <div class="header-left">
+            <div class="icon">🍱</div>
+            <h3>Porsi Kecil</h3>
+          </div>
+          <span class="harga-badge">Rp 8.000</span>
+        </div>
+
+        <!-- Daftar foto menu (scroll horizontal) -->
+        <div class="menu-scroll-area" id="listUser">
+
+          <!-- Tambah menu sesuai kebutuhan -->
+
+        </div>
+
+        <!-- Penerima -->
+        <div class="porsi-penerima">
+          <p>🎯 Untuk:</p>
+          <div class="penerima-chips">
+            <span class="chip">Balita</span>
+            <span class="chip">TK</span>
+            <span class="chip">Kelas 1 SD</span>
+            <span class="chip">Kelas 2 SD</span>
+            <span class="chip">Kelas 3 SD</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- end porsi kecil -->
+
+      <!-- ===== KARTU PORSI BESAR ===== -->
+      <div class="porsi-card porsi-besar">
+
+        <!-- Header -->
+        <div class="porsi-card-header">
+          <div class="header-left">
+            <div class="icon">🥘</div>
+            <h3>Porsi Besar</h3>
+          </div>
+          <span class="harga-badge">Rp 10.000</span>
+        </div>
+
+        <!-- Daftar foto menu (scroll horizontal) -->
+        <div class="menu-scroll-area" id="listPorsiBesar">
+
+          
+
+        </div>
+
+        <!-- Penerima -->
+        <div class="porsi-penerima">
+          <p>🎯 Untuk:</p>
+          <div class="penerima-chips">
+            <span class="chip">Ibu Hamil</span>
+            <span class="chip">Ibu Menyusui</span>
+            <span class="chip">Kelas 4–6 SD</span>
+            <span class="chip">SMP</span>
+            <span class="chip">SMA</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- end porsi besar -->
+
+    </div>
+    <!-- end porsi-wrapper -->
+
+    <!-- Banner Jadwal -->
+    <div class="jadwal-banner">
+      <div class="jadwal-icon">🚚</div>
+      <div>
+        <h3>Jadwal Pengantaran</h3>
+        <p>Pengantaran dilakukan setiap:</p>
+        <div class="hari-chips">
+          <span class="hari-chip">Senin</span>
+          <span class="hari-chip">Selasa</span>
+          <span class="hari-chip">Rabu</span>
+          <span class="hari-chip">Kamis</span>
+          <span class="hari-chip">Jumat</span>
+          <span class="hari-chip">Sabtu</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!----------------------------------------------------->
+
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Kolom 1: Logo / Nama -->
+      <div class="footer-box">
+        <h2>Dapur MBG Lenek</h2>
+        <p>Menyediakan Layanan Terbaik untuk Program Pemerintah Bersama Kami Terus Maju</p>
+      </div>
+
+      <!-- Kolom 2: Menu -->
+      <div class="footer-box">
+        <h3>Menu</h3>
+        <a href="#">Home</a>
+        <a href="./navbar/infomasi.html">Informasi</a>
+        <a href="./navbar/galeri.html">Galeri</a>
+        <a href="./navbar/about.html">Tentang Kami</a>
+      </div>
+
+      <!-- Kolom 3: Kontak -->
+      <div class="footer-box">
+        <h3>Kontak</h3>
+
+        <a href="https://wa.me/6281234567890" class="footer-item">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>081234567890</span>
+        </a>
+
+        <a href="mailto:email@gmail.com" class="footer-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>email@gmail.com</span>
+        </a>
+
+        <a href="#" class="footer-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Lenek, Lombok Timur</span>
+        </a>
+
+      </div>
+
+      <!-- Kolom 4: Sosial Media -->
+      <div class="footer-box">
+        <h3>Follow Kita</h3>
+        <div class="social">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      &copy; 2026 <span>Dapur MBG Lenek</span> · Kota Lenek, Lombok Timur, NTB · Program Makan Bergizi Gratis
+    </div>
+  </footer>
+
+  <script src="./script/script.js"></script>
+  <script type="module" src="./script/show.js"></script>
+  
+</body>
+
+</html>

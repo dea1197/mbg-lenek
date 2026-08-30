@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Galeri</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/admin.css">
+  <link rel="stylesheet" href="../style/edit-produk.css">
+  <link rel="stylesheet" href="./style/dataAbout.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="home" id="home">
+      <a href="../admin.html">🏠</a>
+      <p><a href="../admin.html">Dapur MBG Lenek</a></p>
+    </div>
+
+    <ul class="nav-link" id="navLink">
+      <li><a href="../index.html">Home User</a></li>
+      <li><a href="../navbar/infomasi.html">Informasi</a></li>
+
+      <li><a href="../navbar/galeri.html">Galeri</a></li>
+      <li><a href="../navbar/about.html">Tentang Kami</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+  </nav>
+
+  <!----SideBar --------------------------->
+  <div class="sidebar-con">
+
+    <div class="sidebar">
+      <ul class="sidebar-link">
+        <li><a href="./dataGaleri.html">Data Galeri</a></li>
+        <li><a href="./dataInformasi.html">Data Informasi</a></li>
+        <li><a href="./dataGambar.html">Data Gambar</a></li>
+        <li><a href="#">Data Tentang Kami</a></li>
+      </ul>
+    </div>
+
+    <button id="btn-sidebar">❯</button>
+  </div>
+
+
+
+  <!----------Tentang Kami ------------->
+  <h3 class="h3-aboutUs">Tentang Kami</h3>
+
+  <div id="aboutUs">
+
+  </div>
+
+  
+
+  <!-----------Form edit about us------------>
+  <div id="modalAbout" class="modal">
+    <div class="modal-content">
+      <h3>Edit Tentang Kami</h3>
+
+      <input type="file" id="editAboutImage">
+      <textarea id="editAboutDesc"></textarea>
+
+      <button id="btnUpdateAbout">Update</button>
+      <button onclick="closeAboutModal()">Batal</button>
+    </div>
+  </div>
+
+
+  <script src="../script/script.js"></script>
+  <script type="module" src="./script/dataAbout.js"></script>
+  
+</body>
+
+</html>

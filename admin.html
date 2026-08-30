@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="./style/edit-produk.css">
+  <link rel="stylesheet" href="./style/admin.css">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="home" id="home">
+      <a href="#">🏠</a>
+      <p><a href="#">Dapur MBG Lenek</a></p>
+    </div>
+
+    <ul class="nav-link" id="navLink">
+      <li><a href="index.html">Home User</a></li>
+      <li><a href="navbar/infomasi.html">Informasi</a></li>
+
+      <li><a href="./navbar/galeri.html">Galeri</a></li>
+      <li><a href="./navbar/about.html">Tentang Kami</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+  </nav>
+
+  <!-----SideBAR------------------------------>
+  <div class="sidebar-con">
+
+    <div class="sidebar">
+      <ul class="sidebar-link">
+        <li><a href="./sidebar/dataGaleri.html">Data Galeri</a></li>
+        <li><a href="./sidebar/dataInformasi.html">Data Informasi</a></li>
+        <li><a href="./sidebar/dataGambar.html">Data Gambar</a></li>
+        <li><a href="./sidebar/dataAbout.html">Data Tentang Kami</a></li>
+      </ul>
+    </div>
+
+    <button id="btn-sidebar">❯</button>
+  </div>
+
+
+  <div class="logOut-con">
+
+    <h2 id="welcome" style="display:none;"></h2>
+
+    <button id="logoutBtn" style="display:none;">Logout</button>
+  </div>
+
+
+  <div class="login-con" id="loginForm">
+    <h2>Login Admin</h2>
+
+    <div class="div-input-login">
+      <input id="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Password">
+    </div>
+    <button id="loginBtn">Login</button>
+  </div>
+
+  <button class="scroll-bawah">⬇</button>
+
+
+  <hr>
+
+  <div class="div-tmb-menu">
+    <button class="tmb-menu">➕Menu Porsi Kecil</button>
+  </div>
+
+
+  <div class="tambProduk-con">
+
+    <h2>Tambah Menu Porsi Kecil</h2>
+
+    <div class="div-input-tmbData">
+      <input id="name" placeholder="Nama Menu">
+      <input id="price" placeholder="Harga">
+    </div>
+
+    <br><br>
+
+    <input type="file" id="image">
+
+    <br>
+
+
+
+    <h3>Tambahkan detail menu</h3>
+    <div>
+      <label>Porsi</label>
+      <input id="porsi" type="text" placeholder="Porsi">
+    </div>
+
+    <br>
+    <textarea id="descDetail" placeholder="Tambahkan Keterangan.."></textarea>
+    <br>
+    <div>
+      <label>Kalori</label>
+      <input id="kalori" type="text" placeholder="Kalori berapa kkal">
+    </div>
+
+
+    <h4>Informasi Nilai Gizi</h4>
+
+    <div>
+      <label>Energi</label>
+      <input id="energi" type="text" style="margin-bottom: 5px;">
+      <br>
+      <label>Protein</label>
+      <input id="protein" type="text" style="margin-bottom: 5px;">
+      <br>
+      <label>Serat</label>
+      <input id="serat" type="text" style="margin-bottom: 5px;">
+      <br>
+      <label>Karbohidrat</label>
+      <input id="karbohidrat" type="text" style="margin-bottom: 5px;">
+      <br>
+      <label>Lemak</label>
+      <input id="lemak" type="text" style="margin-bottom: 5px;">
+      <br>
+      <label>Natrium</label>
+      <input id="natrium" type="text">
+    </div>
+
+    <h4>Bahan Utama</h4>
+
+    <textarea id="bahanUtama" placeholder="Masukan Bahan-bahan utama.."></textarea>
+    <br>
+    <label>Alergen</label>
+    <textarea id="alergen" placeholder="Apakah bahan-bahan mengandung sifat alergi.."></textarea>
+    <br>
+    <button id="btnTambah">Tambah Menu</button>
+
+    <br>
+
+
+  </div>
+
+  <hr>
+
+  <div class="div-tmb-menu">
+    <button class="tmb-menu-2">➕Menu Porsi Besar</button>
+  </div>
+
+  <div class="tambProduk-con-2" style="display: flex;">
+
+    <h2>Tambah Menu Porsi Besar</h2>
+
+    <div class="div-input-tmbData">
+      <input id="name2" placeholder="Nama Menu">
+      <input id="price2" placeholder="Harga">
+    </div>
+
+    <br><br>
+
+    <input type="file" id="image2">
+
+    <br>
+
+    <h3>Tambahkan detail menu</h3>
+    <div>
+      <label>Porsi</label>
+      <input id="porsi2" type="text" placeholder="Porsi">
+    </div>
+
+    <br>
+    <textarea id="descDetail2" placeholder="Tambahkan Keterangan.."></textarea>
+    <br>
+    <div>
+      <label>Kalori</label>
+      <input id="kalori2" type="text" placeholder="Kalori berapa kkal">
+    </div>
+
+
+    <h4>Informasi Nilai Gizi</h4>
+
+    <div>
+      <label>Energi</label>
+      <input id="energi2" type="text" style="margin-bottom: 5px;">
+      <br>
+      <label>Protein</label>
+      <input id="protein2" type="text" style="margin-bottom: 5px;">
+      <br>
+      <label>Serat</label>
+      <input id="serat2" type="text" style="margin-bottom: 5px;">
+      <br>
+      <label>Karbohidrat</label>
+      <input id="karbohidrat2" type="text" style="margin-bottom: 5px;">
+      <br>
+      <label>Lemak</label>
+      <input id="lemak2" type="text" style="margin-bottom: 5px;">
+      <br>
+      <label>Natrium</label>
+      <input id="natrium2" type="text">
+    </div>
+
+    <h4>Bahan Utama</h4>
+
+    <textarea id="bahanUtama2" placeholder="Masukan Bahan-bahan utama.."></textarea>
+    <br>
+    <label>Alergen</label>
+    <textarea id="alergen2" placeholder="Apakah bahan-bahan mengandung sifat alergi.."></textarea>
+    <br>
+
+    <button id="btnTambah-2">Tambah Menu</button>
+  </div>
+  <hr>
+
+  <!--  Informasi Porsi ---------------------->
+
+  <section class="section-porsi">
+    <h2>Informasi Porsi &amp; Jadwal</h2>
+    <hr>
+
+    <div class="porsi-wrapper">
+
+      <!-- ===== KARTU PORSI KECIL ===== -->
+      <div class="porsi-card porsi-kecil">
+
+        <!-- Header -->
+        <div class="porsi-card-header">
+          <div class="header-left">
+            <div class="icon">🍱</div>
+            <h3>Porsi Kecil</h3>
+          </div>
+          <span class="harga-badge">Rp 8.000</span>
+        </div>
+
+        <!-- Daftar foto menu (scroll horizontal) -->
+        <div class="menu-scroll-area" id="listAdmin">
+
+          <!-- Tambah menu sesuai kebutuhan -->
+
+        </div>
+
+        <!-- Penerima -->
+        <div class="porsi-penerima">
+          <p>🎯 Untuk:</p>
+          <div class="penerima-chips">
+            <span class="chip">Balita</span>
+            <span class="chip">TK</span>
+            <span class="chip">Kelas 1 SD</span>
+            <span class="chip">Kelas 2 SD</span>
+            <span class="chip">Kelas 3 SD</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- end porsi kecil -->
+
+      <!-- ===== KARTU PORSI BESAR ===== -->
+      <div class="porsi-card porsi-besar">
+
+        <!-- Header -->
+        <div class="porsi-card-header">
+          <div class="header-left">
+            <div class="icon">🥘</div>
+            <h3>Porsi Besar</h3>
+          </div>
+          <span class="harga-badge">Rp 10.000</span>
+        </div>
+
+        <!-- Daftar foto menu (scroll horizontal) -->
+        <div class="menu-scroll-area" id="listPorsiBesar">
+
+
+        </div>
+
+        <!-- Penerima -->
+        <div class="porsi-penerima">
+          <p>🎯 Untuk:</p>
+          <div class="penerima-chips">
+            <span class="chip">Ibu Hamil</span>
+            <span class="chip">Ibu Menyusui</span>
+            <span class="chip">Kelas 4–6 SD</span>
+            <span class="chip">SMP</span>
+            <span class="chip">SMA</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- end porsi besar -->
+
+    </div>
+    <!-- end porsi-wrapper -->
+
+    <!-- Banner Jadwal -->
+    <div class="jadwal-banner">
+      <div class="jadwal-icon">🚚</div>
+      <div>
+        <h3>Jadwal Pengantaran</h3>
+        <p>Pengantaran dilakukan setiap:</p>
+        <div class="hari-chips">
+          <span class="hari-chip">Senin</span>
+          <span class="hari-chip">Selasa</span>
+          <span class="hari-chip">Rabu</span>
+          <span class="hari-chip">Kamis</span>
+          <span class="hari-chip">Jumat</span>
+          <span class="hari-chip">Sabtu</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!----------------------------------------------------->
+
+
+  <div id="modalEdit" class="modal">
+    <div class="modal-content">
+      <h3>Edit Data Menu</h3>
+
+      <input type="text" id="editName" placeholder="Nama Menu">
+      <input type="text" id="editPrice" placeholder="Harga">
+      <input type="text" id="editPorsi" placeholder="Porsi" style="margin-bottom: 10px;">
+      <textarea id="editDesc" placeholder="Masukan keterangan tentang menu.."></textarea>
+      <input type="text" id="editKalori" placeholder="Kalori" style="margin-bottom: 10px;">
+      <div style="margin-bottom: 10px;">
+        <input type="text" id="editEnergi" placeholder="Energi" style="width: 60px; margin-bottom: 5px;">
+        <input type="text" id="editSerat" placeholder="Serat" style="width: 60px;">
+        <input type="text" id="editLemak" placeholder="Lemak" style="width: 60px;">
+        <input type="text" id="editProtein" placeholder="Protein" style="width: 60px;">
+        <input type="text" id="editKarbo" placeholder="Karbohidrat" style="width: 60px;">
+        <input type="text" id="editNatrium" placeholder="Natrium" style="width: 60px;">
+      </div>
+      <textarea id="editBahanUtama" placeholder="Masukan bahan-bahan utama.."></textarea>
+      <input type="text" id="editAlergen" placeholder="Masukan keterangan alergi bahan.." style="margin-bottom: 10px;">
+
+      <button id="btnUpdate">Update</button>
+      <button onclick="closeModal()">Batal</button>
+    </div>
+  </div>
+
+  <!--  edit Porsi Besar ---------------------->
+
+  <div id="modalEdit2" class="modal">
+    <div class="modal-content">
+      <h3>Edit Data Menu</h3>
+
+      <input type="text" id="editName2" placeholder="Nama Menu">
+      <input type="text" id="editPrice2" placeholder="Harga">
+      <input type="text" id="editPorsi2" placeholder="Porsi" style="margin-bottom: 10px;">
+      <textarea id="editDesc2" placeholder="Masukan keterangan tentang menu.."></textarea>
+      <input type="text" id="editKalori2" placeholder="Kalori" style="margin-bottom: 10px;">
+      <div style="margin-bottom: 10px;">
+        <input type="text" id="editEnergi2" placeholder="Energi" style="width: 60px; margin-bottom: 5px;">
+        <input type="text" id="editSerat2" placeholder="Serat" style="width: 60px;">
+        <input type="text" id="editLemak2" placeholder="Lemak" style="width: 60px;">
+        <input type="text" id="editProtein2" placeholder="Protein" style="width: 60px;">
+        <input type="text" id="editKarbo2" placeholder="Karbohidrat" style="width: 60px;">
+        <input type="text" id="editNatrium2" placeholder="Natrium" style="width: 60px;">
+      </div>
+      <textarea id="editBahanUtama2" placeholder="Masukan bahan-bahan utama.."></textarea>
+      <input type="text" id="editAlergen2" placeholder="Masukan keterangan alergi bahan.." style="margin-bottom: 10px;">
+
+      <button id="btnUpdate-2">Update</button>
+      <button onclick="closeModal2()">Batal</button>
+    </div>
+  </div>
+
+
+
+  <!-- Script--------------------------------------->
+  <script src="./script/script.js"></script>
+  <script type="module" src="./script/app.js"></script>
+
+</body>
+
+</html>

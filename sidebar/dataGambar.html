@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Gambar dan Latar</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/admin.css">
+  <link rel="stylesheet" href="../style/edit-produk.css">
+  <link rel="stylesheet" href="./style/dataGambar.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="home" id="home">
+      <a href="../admin.html">🏠</a>
+      <p><a href="../admin.html">Dapur MBG Lenek</a></p>
+    </div>
+
+    <ul class="nav-link" id="navLink">
+      <li><a href="../index.html">Home User</a></li>
+      <li><a href="../navbar/infomasi.html">Informasi</a></li>
+
+      <li><a href="../navbar/galeri.html">Galeri</a></li>
+      <li><a href="../navbar/about.html">Tentang Kami</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+  </nav>
+
+   <!----SideBar --------------------------->
+  <div class="sidebar-con">
+
+    <div class="sidebar">
+      <ul class="sidebar-link">
+        <li><a href="./dataGaleri.html">Data Galeri</a></li>
+        <li><a href="./dataInformasi.html">Data Informasi</a></li>
+        <li><a href="#">Data Gambar</a></li>
+        <li><a href="./dataAbout.html">Data Tentang Kami</a></li>
+      </ul>
+    </div>
+
+    <button id="btn-sidebar">❯</button>
+  </div>
+  
+
+  <!----------List Gambar------------->
+  <h3 class="h3-data-gambar">Data Gambar dan Latar</h3>
+
+  <div class="div-tmb-slider">
+    <button id="btnTmb-slider">Tambah Gambar Slider➕</button>
+  </div>
+
+  <!---------tambah list slider----->
+  <div class="galeri-cont-form" style="display: none;">
+
+    <h3>Tambah gambar slider</h3>
+
+    <input type="file" id="sliderImage">
+    <br>
+
+    <button id="btnSlider">Upload Gambar</button>
+  </div>
+
+  <div id="list-slider">
+
+  </div>
+
+  <hr>
+
+  <h3 class="h3-gambar-kiri">Gambar Kiri</h3>
+
+  <div id="gambar-kiri">
+
+  </div>
+
+  <div class="div-tmb-gmbKiri">
+    <button id="btnTmb-gmbKiri">Tambah Gambar Kiri➕</button>
+  </div>
+
+  <div class="galeri-cont-form-2" style="display: none;">
+
+    <h3>Tambah gambar Kiri</h3>
+
+    <input type="file" id="kiriImage">
+    <br>
+
+    <button id="btnGambarKiri">Upload Gambar</button>
+  </div>
+
+  <hr>
+
+  <h3 class="h3-gambar-kanan">Gambar Kanan</h3>
+
+  <div id="gambar-kanan">
+
+  </div>
+
+  <div class="galeri-cont-form-3">
+
+    <h3>Tambah gambar Kanan</h3>
+
+    <input type="file" id="kananImage">
+    <br>
+
+    <button id="btnGambarKanan">Upload Gambar</button>
+  </div>
+
+  <script src="../script/script.js"></script>
+  <script type="module" src="./script/dataGambar.js"></script>
+</body>
+
+</html>

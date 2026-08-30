@@ -1,0 +1,27 @@
+
+
+.tmbGaleri-n-min{
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.tmbGaleri-n-con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#listGaleriAdmin{
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
