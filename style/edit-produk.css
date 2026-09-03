@@ -5,7 +5,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  overflow-y: auto;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
@@ -17,38 +19,54 @@
   width: 300px;
   border-radius: 10px;
   height: 540px;
+  max-height: 90vh;
+  /* batasi tinggi modal maksimal 90% layar */
+  overflow-y: auto;
+  /* biar isi modal bisa di-scroll */
+  margin: 20px auto;
+  /* kasih jarak atas-bawah biar gak nempel viewport */
+  -webkit-overflow-scrolling: touch;
+  /* smooth scroll di mobile */
 }
 
-.modal-content h3{
+.modal-content h3 {
   text-align: center;
 }
 
-.modal-content input{
+.modal-content input {
   height: 30px;
   font-size: 15px;
   border: 1px solid gray;
   padding: 0 10px;
   border-radius: 5px;
 }
-.modal-content textarea{
+
+.modal-content textarea {
   min-height: 70px;
   font-size: 15px;
   padding: 0 5px;
   margin-bottom: 10px;
 }
-#editName, #editPrice,
-#btnUpdate, #btnUpdateStrOrg,
-#editGaleriImage,#btnUpdateGaleri{
+
+#editName,
+#editPrice,
+#btnUpdate,
+#btnUpdateStrOrg,
+#editGaleriImage,
+#btnUpdateGaleri {
   margin-bottom: 10px;
 }
 
-#editName2, #editPrice2,
-#btnUpdate-2, #btnUpdateStrOrg,
-#editGaleriImage,#btnUpdateGaleri{
+#editName2,
+#editPrice2,
+#btnUpdate-2,
+#btnUpdateStrOrg,
+#editGaleriImage,
+#btnUpdateGaleri {
   margin-bottom: 10px;
 }
 
-.modal-content button{
+.modal-content button {
   padding: 5px 0;
   font-weight: bold;
   font-size: 15px;

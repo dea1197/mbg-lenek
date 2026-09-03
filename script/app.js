@@ -400,11 +400,15 @@ window.editProduk = async function (id) {
     return;
   }
 
-  oldImageUrl = image;
-
   const data = snapshot.val();
 
-  editMenuImage.value = data.file || "";
+  // simpan URL gambar lama dulu, gunakan field yang benar (samakan dengan yang dipakai saat create)
+  oldImageUrl = data.image || data.file || "";
+
+  // tampilkan preview gambar lama (bukan lewat input file)
+  const previewEl = document.getElementById("editImagePreview");
+  if (previewEl) previewEl.src = oldImageUrl;
+
   editName.value = data.name || "";
   editPrice.value = data.price || "";
 
@@ -433,6 +437,7 @@ window.closeModal = function () {
 };
 
 const editMenuImage = document.getElementById("editMenuImage");
+
 let oldImageUrl = "";
 
 document.getElementById("btnUpdate")
@@ -529,7 +534,7 @@ const editAlergen2 = document.getElementById("editAlergen2");
 
 let selectedId2 = null;
 
-window.editProduk2 = async function (id) {
+window.editProduk2 = async function (id, image) {
 
   if (!isAdminLogin) {
     alert("Akses ditolak!");
@@ -546,10 +551,13 @@ window.editProduk2 = async function (id) {
   }
 
   const data = snapshot.val();
-  
-  oldImageUrl2 = image;
 
-  editMenuImage.value = data.file || "";
+  // simpan URL gambar lama dulu, gunakan field yang benar (samakan dengan yang dipakai saat create)
+  oldImageUrl2 = data.image || data.file || "";
+
+  // tampilkan preview gambar lama (bukan lewat input file)
+  const previewEl = document.getElementById("editImagePreview2");
+  if (previewEl) previewEl.src = oldImageUrl2;
 
   editName2.value = data.name || "";
   editPrice2.value = data.price || "";
