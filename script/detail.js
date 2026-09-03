@@ -90,8 +90,11 @@ async function loadDetail() {
   document.getElementById("detail-panel").innerHTML = `
   
     <div class="detail-hero">
-      <img src="${data.image}" 
-           style="width:100%; height:100%; object-fit:cover;">
+      <a href="${data.image}" target="_blank">
+        <img src="${data.image}" 
+            style="width:100%; height:100%; object-fit:cover;">
+      </a>
+      
     </div>
 
     <div class="detail-body">
@@ -105,7 +108,7 @@ async function loadDetail() {
       <div class="cal-bar-wrap">
 
   <div class="cal-bar-label">
-    <span>Kalori</span>
+    <span>Kalori </span>
 
     <span>
       <strong>${detail.kalori} kkal</strong>
