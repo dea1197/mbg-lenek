@@ -55,7 +55,7 @@ body {
 
 .listAdmin-grid {
   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
 }
 
@@ -65,14 +65,15 @@ body {
 }
 
 
-.menu-item:hover{
+.menu-item:hover {
   transform: translateY(-5px);
   transition: 0.3s;
 }
 
 .menu-item p {
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* max 3 baris */
+  -webkit-line-clamp: 3;
+  /* max 3 baris */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-align: center;
@@ -91,7 +92,7 @@ body {
   padding: 5px 10px;
 }
 
-.btn-editDel-con button{
+.btn-editDel-con button {
   border: none;
   color: white;
   font-size: 15px;
@@ -100,6 +101,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .editBtn {
   background-color: hsl(240, 100%, 50%);
   margin-right: 5px;
@@ -135,42 +137,97 @@ body {
   margin-bottom: 10px;
 }
 
-.tambProduk-con, .tambProduk-con-2{
+.modal-tmb-menu,
+.modal-tmb-menu2 {
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: hsla(0, 0%, 83%, 0.801);
-  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
 
+.tambProduk-con,
+.tambProduk-con-2 {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 20px;
+  margin: 10% auto;
+  width: 300px;
+  border-radius: 10px;
+  height: 540px;
+  max-height: 90vh;
+  /* batasi tinggi modal maksimal 90% layar */
+  overflow-y: auto;
+  /* biar isi modal bisa di-scroll */
+  margin: 20px auto;
+  /* kasih jarak atas-bawah biar gak nempel viewport */
+  -webkit-overflow-scrolling: touch;
+  /* smooth scroll di mobile */
+  z-index: 99;
+}
+
+.tambProduk-con h3 {
+  text-align: center;
+}
+
+.tambProduk-con-2 h3 {
+  text-align: center;
+}
+
+.tambProduk-con h4 {
+  text-align: center;
+
+}
+
+.tambProduk-con-2 h4 {
+  text-align: center;
+
+}
+
+.flex-gizi {
+  text-align: center;
 }
 
 .tambProduk-con input {
-  height: 25px;
+
   font-size: 15px;
-  padding: 0 10px;
+  border: 1px solid gray;
+  padding: 8px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
+
 .tambProduk-con-2 input {
-  height: 25px;
+
   font-size: 15px;
-  padding: 0 10px;
+  border: 1px solid gray;
+  padding: 8px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .tambProduk-con textarea {
+  min-height: 70px;
   font-size: 15px;
   padding: 0 5px;
-  width: 300px;
-  min-height: 70px;
+  margin-bottom: 10px;
 }
+
 .tambProduk-con-2 textarea {
+  min-height: 70px;
   font-size: 15px;
   padding: 0 5px;
-  width: 300px;
-  min-height: 70px;
+  margin-bottom: 10px;
 }
 
 .tambProduk-con button {
-  background-color: hsl(120, 41%, 43%);
+  background-color: hsl(219, 82%, 63%);
   color: white;
   font-size: 15px;
   border: none;
@@ -178,10 +235,15 @@ body {
   padding: 6px 10px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
+
+.tambProduk-con button:hover {
+  background-color: hsl(219, 61%, 44%);
+}
+
 .tambProduk-con-2 button {
-  background-color: hsl(120, 41%, 43%);
+  background-color: hsl(30, 90%, 52%);
   color: white;
   font-size: 15px;
   border: none;
@@ -189,17 +251,16 @@ body {
   padding: 6px 10px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
-.div-tmb-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.tambProduk-con-2 button:hover {
+  background-color: hsl(30, 77%, 40%);
 }
 
-.tmb-menu,.tmb-menu-2 {
-  background-color: hsl(120, 100%, 25%);
+
+.tmb-menu {
+  background-color: hsl(219, 82%, 63%);
   color: white;
   border: none;
   padding: 6px 9px;
@@ -208,6 +269,26 @@ body {
   margin-top: 20px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.tmb-menu:hover {
+  background-color: hsl(219, 61%, 38%);
+}
+
+.tmb-menu-2 {
+  background-color: hsl(30, 90%, 52%);
+  color: white;
+  border: none;
+  padding: 6px 9px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tmb-menu-2:hover {
+  background-color: hsl(30, 90%, 41%);
 }
 
 .h3-data-strOrg {
@@ -285,7 +366,9 @@ body {
   margin-bottom: 10px;
 }
 
-.galeri-cont-form,.galeri-cont-form-2,.galeri-cont-form-3 {
+.galeri-cont-form,
+.galeri-cont-form-2,
+.galeri-cont-form-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -313,7 +396,8 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-.galeri-cont-form-3 button{
+
+.galeri-cont-form-3 button {
   background-color: green;
   color: white;
   border: none;
@@ -323,7 +407,8 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-.galeri-cont-form-2 button{
+
+.galeri-cont-form-2 button {
   background-color: green;
   color: white;
   border: none;
@@ -346,13 +431,15 @@ body {
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 10px;
-  
+
 
 }
+
 /*----Batasi Text yang terlalu Panjang---*/
-.list-galeri-con p{
-   display: -webkit-box;
-  -webkit-line-clamp: 3; /* max 3 baris */
+.list-galeri-con p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* max 3 baris */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -374,7 +461,7 @@ body {
   border-radius: 8px;
 }
 
-.list-galeri-con:hover{
+.list-galeri-con:hover {
   transform: translateY(-5px);
   transition: 0.3s;
 }
@@ -394,7 +481,7 @@ body {
   margin-top: auto;
 }
 
-.scroll-bawah{
+.scroll-bawah {
   background-color: hsla(240, 100%, 50%, 0.664);
   color: white;
   border: none;
@@ -407,25 +494,24 @@ body {
   top: 50%;
   z-index: 1;
 }
-.scroll-bawah:hover{
+
+.scroll-bawah:hover {
   background-color: hsla(240, 100%, 60%, 0.829);
 }
 
-.div-input-tmbData input{
+
+.div-input-login input {
   width: 150px;
   margin-right: 5px;
 }
-.div-input-login input{
-  width: 150px;
-  margin-right: 5px;
-}
-.login-con h2{
+
+.login-con h2 {
   margin-top: 0;
 }
 
 /*---- SIDEBAR ----------------*/
 
-.sidebar{
+.sidebar {
   background-color: hsla(0, 0%, 50%, 0.911);
   position: fixed;
   top: 60px;
@@ -437,10 +523,11 @@ body {
   z-index: 1;
 }
 
-.sidebar.active{
+.sidebar.active {
   left: 0;
 }
-.sidebar-link li{
+
+.sidebar-link li {
   font-size: 17px;
   font-weight: bold;
   margin: 20px 10px;
@@ -449,14 +536,15 @@ body {
   padding: 10px;
   border-radius: 5px;
 
-  
+
 }
 
 
-.sidebar-con{
+.sidebar-con {
   position: relative;
 }
-#btn-sidebar{
+
+#btn-sidebar {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
@@ -472,6 +560,6 @@ body {
   z-index: 1;
 }
 
-#btn-sidebar.active{
+#btn-sidebar.active {
   left: 210px;
 }

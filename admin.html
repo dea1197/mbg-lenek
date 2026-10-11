@@ -35,6 +35,13 @@
   <div class="sidebar-con">
 
     <div class="sidebar">
+      <div class="logOut-con">
+
+        <h2 id="welcome" style="display:none;"></h2>
+
+        <button id="logoutBtn" style="display:none;">Logout</button>
+      </div>
+
       <ul class="sidebar-link">
         <li><a href="./sidebar/dataGaleri.html">Data Galeri</a></li>
         <li><a href="./sidebar/dataInformasi.html">Data Informasi</a></li>
@@ -44,14 +51,6 @@
     </div>
 
     <button id="btn-sidebar">❯</button>
-  </div>
-
-
-  <div class="logOut-con">
-
-    <h2 id="welcome" style="display:none;"></h2>
-
-    <button id="logoutBtn" style="display:none;">Logout</button>
   </div>
 
 
@@ -68,150 +67,113 @@
   <button class="scroll-bawah">⬇</button>
 
 
-  <hr>
+  <div class="modal-tmb-menu">
+    <div class="tambProduk-con">
 
-  <div class="div-tmb-menu">
-    <button class="tmb-menu">➕Menu Porsi Kecil</button>
-  </div>
+      <h3>Tambah Menu Porsi Kecil</h3>
 
 
-  <div class="tambProduk-con">
-
-    <h2>Tambah Menu Porsi Kecil</h2>
-
-    <div class="div-input-tmbData">
       <input id="name" placeholder="Nama Menu">
       <input id="price" placeholder="Harga">
-    </div>
 
-    <br><br>
+      <input type="file" id="image">
 
-    <input type="file" id="image">
+      <h3>Detail menu</h3>
 
-    <br>
-
-
-
-    <h3>Tambahkan detail menu</h3>
-    <div>
-      <label>Porsi</label>
       <input id="porsi" type="text" placeholder="Porsi">
-    </div>
 
-    <br>
-    <textarea id="descDetail" placeholder="Tambahkan Keterangan.."></textarea>
-    <br>
-    <div>
-      <label>Kalori</label>
+      <textarea id="descDetail" placeholder="Tambahkan Keterangan.."></textarea>
+
       <input id="kalori" type="text" placeholder="Kalori berapa kkal">
+
+      <h4>Informasi Nilai Gizi</h4>
+
+
+      <div class="flex-gizi">
+        <input id="energi" placeholder="Energi" type="text" style="width: 60px; margin-bottom: 5px;">
+
+        <input id="protein" placeholder="Protein" type="text" style="width: 60px; margin-bottom: 5px;">
+
+        <input id="serat" placeholder="Serat" type="text" style="width: 60px; margin-bottom: 5px;">
+
+        <input id="karbohidrat" placeholder="Karbohidrat" style="width: 60px; margin-bottom: 5px;">
+
+        <input id="lemak" placeholder="Lemak" type="text" style="width: 60px; margin-bottom: 5px;">
+
+        <input id="natrium" placeholder="Natrium" type="text" style="width: 60px; margin-bottom: 5px;">
+      </div>
+
+
+
+      <h4>Bahan Utama</h4>
+
+      <textarea id="bahanUtama" placeholder="Masukan Bahan-bahan utama.."></textarea>
+
+      <h4>Alergen</h4>
+
+      <textarea id="alergen" placeholder="Apakah bahan-bahan mengandung sifat alergi.."></textarea>
+
+      <button id="btnTambah">Tambah Menu</button>
+      <button id="batal-tmb">Batal</button>
+
     </div>
-
-
-    <h4>Informasi Nilai Gizi</h4>
-
-    <div>
-      <label>Energi</label>
-      <input id="energi" type="text" style="margin-bottom: 5px;">
-      <br>
-      <label>Protein</label>
-      <input id="protein" type="text" style="margin-bottom: 5px;">
-      <br>
-      <label>Serat</label>
-      <input id="serat" type="text" style="margin-bottom: 5px;">
-      <br>
-      <label>Karbohidrat</label>
-      <input id="karbohidrat" type="text" style="margin-bottom: 5px;">
-      <br>
-      <label>Lemak</label>
-      <input id="lemak" type="text" style="margin-bottom: 5px;">
-      <br>
-      <label>Natrium</label>
-      <input id="natrium" type="text">
-    </div>
-
-    <h4>Bahan Utama</h4>
-
-    <textarea id="bahanUtama" placeholder="Masukan Bahan-bahan utama.."></textarea>
-    <br>
-    <label>Alergen</label>
-    <textarea id="alergen" placeholder="Apakah bahan-bahan mengandung sifat alergi.."></textarea>
-    <br>
-    <button id="btnTambah">Tambah Menu</button>
-
-    <br>
-
-
   </div>
 
-  <hr>
 
-  <div class="div-tmb-menu">
-    <button class="tmb-menu-2">➕Menu Porsi Besar</button>
-  </div>
+  <div class="modal-tmb-menu2">
+    <div class="tambProduk-con-2">
 
-  <div class="tambProduk-con-2">
+      <h3>Tambah Menu Porsi Besar</h3>
 
-    <h2>Tambah Menu Porsi Besar</h2>
 
-    <div class="div-input-tmbData">
       <input id="name2" placeholder="Nama Menu">
       <input id="price2" placeholder="Harga">
-    </div>
 
-    <br><br>
+      <input type="file" id="image2">
 
-    <input type="file" id="image2">
+      <h3>Detail menu</h3>
 
-    <br>
-
-    <h3>Tambahkan detail menu</h3>
-    <div>
-      <label>Porsi</label>
       <input id="porsi2" type="text" placeholder="Porsi">
-    </div>
 
-    <br>
-    <textarea id="descDetail2" placeholder="Tambahkan Keterangan.."></textarea>
-    <br>
-    <div>
-      <label>Kalori</label>
+      <textarea id="descDetail2" placeholder="Tambahkan Keterangan.."></textarea>
+
       <input id="kalori2" type="text" placeholder="Kalori berapa kkal">
+
+
+
+      <h4>Informasi Nilai Gizi</h4>
+
+
+      <div class="flex-gizi">
+        <input id="energi2" placeholder="Energi" type="text" style="width: 60px; margin-bottom: 5px;">
+
+        <input id="protein2" placeholder="Protein" type="text" style="width: 60px; margin-bottom: 5px;">
+
+        <input id="serat2" placeholder="Serat" type="text" style="width: 60px; margin-bottom: 5px;">
+
+        <input id="karbohidrat2" placeholder="Karbohidrat" style="width: 60px; margin-bottom: 5px;">
+
+        <input id="lemak2" placeholder="Lemak" type="text" style="width: 60px; margin-bottom: 5px;">
+
+        <input id="natrium2" placeholder="Natrium" type="text" style="width: 60px; margin-bottom: 5px;">
+      </div>
+
+
+
+      <h4>Bahan Utama</h4>
+
+      <textarea id="bahanUtama2" placeholder="Masukan Bahan-bahan utama.."></textarea>
+
+      <h4>Alergen</h4>
+
+      <textarea id="alergen2" placeholder="Apakah bahan-bahan mengandung sifat alergi.."></textarea>
+
+      <button id="btnTambah-2">Tambah Menu</button>
+      <button id="batal-tmb2">Batal</button>
     </div>
-
-
-    <h4>Informasi Nilai Gizi</h4>
-
-    <div>
-      <label>Energi</label>
-      <input id="energi2" type="text" style="margin-bottom: 5px;">
-      <br>
-      <label>Protein</label>
-      <input id="protein2" type="text" style="margin-bottom: 5px;">
-      <br>
-      <label>Serat</label>
-      <input id="serat2" type="text" style="margin-bottom: 5px;">
-      <br>
-      <label>Karbohidrat</label>
-      <input id="karbohidrat2" type="text" style="margin-bottom: 5px;">
-      <br>
-      <label>Lemak</label>
-      <input id="lemak2" type="text" style="margin-bottom: 5px;">
-      <br>
-      <label>Natrium</label>
-      <input id="natrium2" type="text">
-    </div>
-
-    <h4>Bahan Utama</h4>
-
-    <textarea id="bahanUtama2" placeholder="Masukan Bahan-bahan utama.."></textarea>
-    <br>
-    <label>Alergen</label>
-    <textarea id="alergen2" placeholder="Apakah bahan-bahan mengandung sifat alergi.."></textarea>
-    <br>
-
-    <button id="btnTambah-2">Tambah Menu</button>
   </div>
-  <hr>
+
+  
 
   <!--  Informasi Porsi ---------------------->
 
@@ -252,6 +214,7 @@
           </div>
         </div>
 
+        <button class="tmb-menu">➕ Tambah Menu</button>
       </div>
       <!-- end porsi kecil -->
 
@@ -285,6 +248,7 @@
           </div>
         </div>
 
+        <button class="tmb-menu-2">➕ Tambah Menu</button>
       </div>
       <!-- end porsi besar -->
 

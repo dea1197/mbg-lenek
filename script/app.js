@@ -671,39 +671,31 @@ onAuthStateChanged(auth, (user) => {
 
 
 
-const tampilTmbMenu = document.querySelector(".tambProduk-con");
-const tmbMenu = document.querySelector(".tmb-menu");
+const tampilTmbMenu = document.querySelector(".modal-tmb-menu");
+const batalTmb = document.getElementById("batal-tmb");
 
 document.querySelector(".tmb-menu")
   .addEventListener("click", () => {
-    if (tampilTmbMenu.style.display === "flex") {
-      tampilTmbMenu.style.display = "none";
-      tmbMenu.textContent = "➕Menu Porsi Kecil";
-    } else {
-      tampilTmbMenu.style.display = "flex";
-      tampilTmbMenu2.style.display = "none";
-      tmbMenu.textContent = "Minimize Form➖";
-      tmbMenu2.textContent = "➕Menu Porsi Besar";
-    }
+    tampilTmbMenu.style.display = "flex"
 
   })
 
-const tampilTmbMenu2 = document.querySelector(".tambProduk-con-2");
-const tmbMenu2 = document.querySelector(".tmb-menu-2");
+batalTmb.addEventListener("click", () => {
+  tampilTmbMenu.style.display = "none";
+})
+
+const tampilTmbMenu2 = document.querySelector(".modal-tmb-menu2");
+const batalTmb2 = document.getElementById("batal-tmb2");
 
 document.querySelector(".tmb-menu-2")
   .addEventListener("click", () => {
-    if (tampilTmbMenu2.style.display === "flex") {
-      tampilTmbMenu2.style.display = "none";
-      tmbMenu2.textContent = "➕Menu Porsi Besar";
-    } else {
-      tampilTmbMenu2.style.display = "flex";
-      tmbMenu2.textContent = "Minimize Form➖";
-      tampilTmbMenu.style.display = "none";
-      tmbMenu.textContent = "➕Menu Porsi Kecil";
-    }
+     tampilTmbMenu2.style.display = "flex"
 
   })
+
+batalTmb2.addEventListener("click", () => {
+  tampilTmbMenu2.style.display = "none";
+})
 
 
 // auto scroll langsung paling bawah
